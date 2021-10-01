@@ -6,6 +6,16 @@ webhook_url:
 sections:
 - type: heading
   label: Content
+- type: document
+  path: src/index.md
+  label: Homepage
+- type: directory
+  path: src/pages
+  label: Pages
+  create: documents
+  match: "*.md"
+  templates:
+  - page
 - type: directory
   path: src/posts
   label: Posts
@@ -18,6 +28,9 @@ sections:
 - type: document
   path: src/_data/navigation.json
   label: Navigation
+- type: document
+  path: src/_data/site.json
+  label: Site settings
 - type: document
   path: src/_data/tokens.json
   label: Theme settings
